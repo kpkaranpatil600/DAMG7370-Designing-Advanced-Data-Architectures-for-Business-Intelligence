@@ -8,7 +8,16 @@
 * Load data
 
 ## Dimensional Data Model:
-![](IMDB_%202022-07-23-15-40-28.png)
+![](Screenshot_2022-07-23-16-05-48.png)
 
 ## Data Preparation Workflow:
-![](IMDB_%202022-07-23-15-45-29.png)
+![](Screenshot_2022-07-23-16-06-12.png)
+
+## Table Row Counts:
+![](Screenshot_2022-07-23-16-06-30.png)
+![](Screenshot_2022-07-23-16-06-35.png)
+![](Screenshot_2022-07-23-16-06-41.png)
+![](Screenshot_2022-07-23-16-06-46.png)
+![](Screenshot_2022-07-23-16-06-50.png)
+![](Screenshot_2022-07-23-16-06-55.png)
+![](Screenshot_2022-07-23-16-07-00.png)
