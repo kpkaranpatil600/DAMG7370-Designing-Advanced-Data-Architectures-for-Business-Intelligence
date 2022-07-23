@@ -9,3 +9,6 @@
 
 ## Dimensional Data Model:
 ![](IMDB_%202022-07-23-15-40-28.png)
+
+## Data Preparation Workflow:
+![](IMDB_%202022-07-23-15-45-29.png)
