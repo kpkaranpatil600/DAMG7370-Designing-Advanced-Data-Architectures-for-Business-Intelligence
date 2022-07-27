@@ -15,11 +15,19 @@
 
 ## Table Row Counts:
 ![](Screenshot_2022-07-27-16-43-18.png)
+
 ![](Screenshot_2022-07-27-16-43-28.png)
+
 ![](Screenshot_2022-07-27-16-43-40.png)
+
 ![](Screenshot_2022-07-27-16-43-45.png)
+
 ![](Screenshot_2022-07-27-16-43-51.png)
+
 ![](Screenshot_2022-07-27-16-43-56.png)
+
 ![](Screenshot_2022-07-27-16-44-01.png)
+
 ![](Screenshot_2022-07-27-16-44-06.png)
+
 ![](Screenshot_2022-07-27-16-44-11.png)
