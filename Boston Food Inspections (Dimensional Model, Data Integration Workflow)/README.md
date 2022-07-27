@@ -15,9 +15,15 @@
 
 ## Table Row Counts:
 ![](Screenshot_2022-07-23-16-06-30.png)
+
 ![](Screenshot_2022-07-23-16-06-35.png)
+
 ![](Screenshot_2022-07-23-16-06-41.png)
+
 ![](Screenshot_2022-07-23-16-06-46.png)
+
 ![](Screenshot_2022-07-23-16-06-50.png)
+
 ![](Screenshot_2022-07-23-16-06-55.png)
+
 ![](Screenshot_2022-07-23-16-07-00.png)
