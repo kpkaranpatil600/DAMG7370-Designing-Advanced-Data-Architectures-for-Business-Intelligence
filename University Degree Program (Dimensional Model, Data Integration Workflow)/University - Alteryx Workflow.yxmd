@@ -1,0 +1,1621 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_college$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="CollegeName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="V_WString" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="F4" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="F5" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="College_id" selected="True" />
+            <SelectField field="CollegeName" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="294" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="CollegeName" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+            <Field name="CollegeName" size="41" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="V_WString" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_college$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="438" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_college</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_college</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_company$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CompanyRegNo_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="CompanyRegNo" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="CompanyName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="V_String" />
+            <Field name="IndustryType" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="F9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="F10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CompanyRegNo_id" selected="True" />
+            <SelectField field="CompanyRegNo" selected="True" />
+            <SelectField field="CompanyName" selected="True" />
+            <SelectField field="IndustryType" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="294" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="CompanyName" selected="True" />
+            <Field field="IndustryType" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CompanyRegNo_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="CompanyRegNo" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+            <Field name="CompanyName" size="8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="String" />
+            <Field name="IndustryType" size="2" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_company$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="438" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_company</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_company</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_courses$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Course_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Program_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Course_id2" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="CourseName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="V_String" />
+            <Field name="Pre-req" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="V_String" />
+            <Field name="CourseType" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="V_String" />
+            <Field name="Credits" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Course Info" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="F12" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="F13" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="F14" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="F15" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="F16" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Course_id" selected="True" />
+            <SelectField field="Program_id" selected="True" />
+            <SelectField field="Department_id" selected="True" />
+            <SelectField field="College_id" selected="True" />
+            <SelectField field="Course_id2" selected="True" rename="CourseNo" />
+            <SelectField field="CourseName" selected="True" />
+            <SelectField field="Pre-req" selected="True" />
+            <SelectField field="CourseType" selected="True" />
+            <SelectField field="Credits" selected="True" />
+            <SelectField field="Course Info" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="306" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="CourseName" selected="True" />
+            <Field field="Pre-req" selected="True" />
+            <Field field="CourseType" selected="True" />
+            <Field field="Course Info" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Course_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Program_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="CourseNo" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="CourseName" size="4" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="String" />
+            <Field name="Pre-req" size="8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="String" />
+            <Field name="CourseType" size="8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="String" />
+            <Field name="Credits" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+            <Field name="Course Info" size="8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_courses$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="450" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_date</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_date</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_date$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F2" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F3" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="DayOfWeek" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="V_String" />
+            <Field name="DayOfMonth" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="WeekOfYear" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="MonthOfYear" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="V_String" />
+            <Field name="Year" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F11" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F12" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F13" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F14" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="F15" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date_id" selected="True" />
+            <SelectField field="DayOfWeek" selected="True" />
+            <SelectField field="DayOfMonth" selected="True" />
+            <SelectField field="WeekOfYear" selected="True" />
+            <SelectField field="MonthOfYear" selected="True" />
+            <SelectField field="Year" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="306" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="DayOfWeek" selected="True" />
+            <Field field="MonthOfYear" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Date_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="DayOfWeek" size="9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="String" />
+            <Field name="DayOfMonth" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="WeekOfYear" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="MonthOfYear" size="7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="String" />
+            <Field name="Year" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_date$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="450" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_dates</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_dates</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="630" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_department$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="DepartmentName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="F5" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="F9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="774" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Department_id" selected="True" />
+            <SelectField field="College_id" selected="True" />
+            <SelectField field="DepartmentName" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="906" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="DepartmentName" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+            <Field name="DepartmentName" size="24" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_department$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1050" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_department</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_department</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="630" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_geography$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Geo_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="City" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="V_String" />
+            <Field name="State" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="V_String" />
+            <Field name="Country" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="F9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="F10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="774" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Geo_id" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="906" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="City" selected="True" />
+            <Field field="State" selected="True" />
+            <Field field="Country" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Geo_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+            <Field name="City" size="13" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="String" />
+            <Field name="State" size="16" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="String" />
+            <Field name="Country" size="3" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_geography$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1050" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_geography</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_geography</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="630" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_program$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Program_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="ProgramName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="774" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Program_id" selected="True" />
+            <SelectField field="Department_id" selected="True" />
+            <SelectField field="College_id" selected="True" />
+            <SelectField field="ProgramName" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="894" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="ProgramName" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Program_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+            <Field name="ProgramName" size="32" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_program$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1038" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_program</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_program</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="642" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_semester$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Semester_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="SemesterName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="V_String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="F4" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="F5" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="EnrollmentDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="DropDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Semester_id" selected="True" />
+            <SelectField field="SemesterName" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="906" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="SemesterName" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Semester_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+            <Field name="SemesterName" size="14" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_semester$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1050" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_semester</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_semester</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="42" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_teachers$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Professor_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F2" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F3" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="ProfessorName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="V_String" />
+            <Field name="Email ID" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="V_String" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F11" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="F12" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="ProfeessorBirthDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="ProfeessorGeographicSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="TEndDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="TBeginDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Professor_id" selected="True" />
+            <SelectField field="ProfessorName" selected="True" rename="ProfName" />
+            <SelectField field="Email ID" selected="True" rename="ProfEmail_ID" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="318" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="ProfName" selected="True" />
+            <Field field="ProfEmail_ID" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Professor_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+            <Field name="ProfName" size="7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="String" />
+            <Field name="ProfEmail_ID" size="5" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_teachers$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="462" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_professors</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_professors</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="642" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`fact_coop$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CompanyRegNoSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="Student_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="StartDate" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="EndDate" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="F7" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\University.xlsx|||`fact_coop$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CompanyRegNoSK" selected="True" rename="CompanyRegNo_id" />
+            <SelectField field="Student_id" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="StartDate" selected="True" />
+            <SelectField field="EndDate" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="918" y="498" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||fact_coop</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=fact_coop</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="42" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`fact_course_registration$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CourseRegistrationNo_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Program_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Department_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="College_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Semester_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Course_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Section" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="GPA" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="F10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="F11" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="F12" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="F13" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="F14" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Professor_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+            <Field name="Student_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`fact_course_registration$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CourseRegistrationNo_id" selected="True" />
+            <SelectField field="Program_id" selected="True" />
+            <SelectField field="Department_id" selected="True" />
+            <SelectField field="College_id" selected="True" />
+            <SelectField field="Semester_id" selected="True" />
+            <SelectField field="Course_id" selected="True" />
+            <SelectField field="Section" selected="True" />
+            <SelectField field="GPA" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="Professor_id" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="318" y="630" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||fact_course_registration</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=fact_course_registration</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="642" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>University.xlsx
+Query=`dim_students$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Student_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F2" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="StudentName" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="V_String" />
+            <Field name="Email ID" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="V_String" />
+            <Field name="Housing Type" size="255" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="V_String" />
+            <Field name="F6" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F9" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F11" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="F12" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="StudentBirthDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="StudentGeographicSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="SBeginDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="SEndDateSK" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="786" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Student_id" selected="True" />
+            <SelectField field="StudentName" selected="True" />
+            <SelectField field="Email ID" selected="False" rename="StudentEmail_ID" />
+            <SelectField field="Housing Type" selected="True" />
+            <SelectField field="sor_key" selected="True" />
+            <SelectField field="StudentGeographicSK" selected="False" rename="Geo_id" />
+            <SelectField field="SBeginDateSK" selected="False" rename="Date_id" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="906" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="StudentName" selected="True" />
+            <Field field="Housing Type" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Student_id" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+            <Field name="StudentName" size="8" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="String" />
+            <Field name="Housing Type" size="10" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="String" />
+            <Field name="sor_key" source="File: E:\Spring 2022\DWBI\Assignments\Dimensional Data Modeling University Degree Program\Code Review\University.xlsx|||`dim_students$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1050" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=A-university;UID=root;PWD=__EncPwd1__|||dim_student</File>
+          <Passwords>4DB29EDF18D7927C9357EE3D30B54B2E26C58B033D57D6C9E8C7AA11E9A1C9A39AFBC</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Create</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=A-university
+Query=dim_student</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="36" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="Output" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>University</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="7d6f87bd-ddfe-4d86-a2c9-85502292d8df" />
+      <Telemetry>
+        <PreviousWorkflowId value="19aef4b5-4e22-4745-8b78-f70e871a0479" />
+        <OriginWorkflowId value="19aef4b5-4e22-4745-8b78-f70e871a0479" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
